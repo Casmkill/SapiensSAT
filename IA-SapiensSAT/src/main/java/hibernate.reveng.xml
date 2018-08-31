@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="SATFING" match-name="ACTOR"/>
+  <table-filter match-schema="SATFING" match-name="ALERTA"/>
+  <table-filter match-schema="SATFING" match-name="ASIGNATURA"/>
+  <table-filter match-schema="SATFING" match-name="CARRERA"/>
+  <table-filter match-schema="SATFING" match-name="CARRERA_ESTUDIANTE"/>
+  <table-filter match-schema="SATFING" match-name="CENTROS_DE_AYUDA"/>
+  <table-filter match-schema="SATFING" match-name="CLASE"/>
+  <table-filter match-schema="SATFING" match-name="CONSEJERO"/>
+  <table-filter match-schema="SATFING" match-name="DEPARTAMENTO"/>
+  <table-filter match-schema="SATFING" match-name="ESTUDIANTE"/>
+  <table-filter match-schema="SATFING" match-name="FACTOR_RIESGO"/>
+  <table-filter match-schema="SATFING" match-name="FACULTAD"/>
+  <table-filter match-schema="SATFING" match-name="INTERVENCION"/>
+  <table-filter match-schema="SATFING" match-name="PERSONA"/>
+  <table-filter match-schema="SATFING" match-name="PROFESOR"/>
+  <table-filter match-schema="SATFING" match-name="PROTOCOLO_ATENCION"/>
+  <table-filter match-schema="SATFING" match-name="REGISTRO_CLASE_ESTUDIANTE"/>
+</hibernate-reverse-engineering>
