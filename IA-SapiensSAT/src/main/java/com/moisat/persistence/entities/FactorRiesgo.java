@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +17,14 @@ import javax.persistence.Table;
 @Table(name = "FACTOR_RIESGO", schema = "SATFING")
 public class FactorRiesgo implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoFactor;
 	private String especificacion;
 	private String tipoalerta;
-	private Set<Alerta> alertas = new HashSet(0);
+	private Set<Alerta> alertas = new HashSet<Alerta>(0);
 
 	public FactorRiesgo() {
 	}
@@ -29,7 +33,7 @@ public class FactorRiesgo implements java.io.Serializable {
 		this.codigoFactor = codigoFactor;
 	}
 
-	public FactorRiesgo(long codigoFactor, String especificacion, String tipoalerta, Set alertas) {
+	public FactorRiesgo(long codigoFactor, String especificacion, String tipoalerta, Set<Alerta> alertas) {
 		this.codigoFactor = codigoFactor;
 		this.especificacion = especificacion;
 		this.tipoalerta = tipoalerta;

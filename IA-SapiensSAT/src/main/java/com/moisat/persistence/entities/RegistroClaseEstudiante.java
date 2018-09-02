@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.math.BigDecimal;
 import javax.persistence.Column;
@@ -17,6 +17,10 @@ import javax.persistence.Table;
 @Table(name = "REGISTRO_CLASE_ESTUDIANTE", schema = "SATFING")
 public class RegistroClaseEstudiante implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoRegistro;
 	private Estudiante estudiante;
 	private Clase clase;

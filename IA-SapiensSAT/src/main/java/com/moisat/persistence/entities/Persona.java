@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,6 +17,10 @@ import javax.persistence.Table;
 @Table(name = "PERSONA", schema = "SATFING")
 public class Persona implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoPersona;
 	private String nombres;
 	private String apellido;
@@ -27,13 +31,13 @@ public class Persona implements java.io.Serializable {
 	private String correo;
 	private Long telefono;
 	private String apellido2;
-	private Set<Actor> actors = new HashSet(0);
-	private Set<Departamento> departamentos = new HashSet(0);
-	private Set<Carrera> carreras = new HashSet(0);
-	private Set <Estudiante>estudiantes = new HashSet(0);
-	private Set <Profesor>profesors = new HashSet(0);
-	private Set<CentrosDeAyuda> centrosDeAyudas = new HashSet(0);
-	private Set<Consejero> consejeros = new HashSet(0);
+	private Set<Actor> actors = new HashSet<Actor>(0);
+	private Set<Departamento> departamentos = new HashSet<Departamento>(0);
+	private Set<Carrera> carreras = new HashSet<Carrera>(0);
+	private Set<Estudiante> estudiantes = new HashSet<Estudiante>(0);
+	private Set<Profesor> profesors = new HashSet<Profesor>(0);
+	private Set<CentrosDeAyuda> centrosDeAyudas = new HashSet<CentrosDeAyuda>(0);
+	private Set<Consejero> consejeros = new HashSet<Consejero>(0);
 
 	public Persona() {
 	}
@@ -44,8 +48,8 @@ public class Persona implements java.io.Serializable {
 	}
 
 	public Persona(long codigoPersona, String nombres, String apellido, long identificacion, Short tipoidentificacion,
-			String genero, String direccion, String correo, Long telefono, String apellido2, Set actors,
-			Set departamentos, Set carreras, Set estudiantes, Set profesors, Set centrosDeAyudas, Set consejeros) {
+			String genero, String direccion, String correo, Long telefono, String apellido2, Set<Actor> actors,
+			Set<Departamento> departamentos, Set<Carrera> carreras, Set<Estudiante> estudiantes, Set<Profesor> profesors, Set<CentrosDeAyuda> centrosDeAyudas, Set<Consejero> consejeros) {
 		this.codigoPersona = codigoPersona;
 		this.nombres = nombres;
 		this.apellido = apellido;

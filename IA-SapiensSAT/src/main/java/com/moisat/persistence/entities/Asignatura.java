@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,12 +19,16 @@ import javax.persistence.Table;
 @Table(name = "ASIGNATURA", schema = "SATFING")
 public class Asignatura implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long idAsignatura;
 	private Departamento departamento;
 	private String nombreAsignatura;
 	private String componenteCurso;
 	private Long creditos;
-	private Set <Clase> clases = new HashSet(0);
+	private Set<Clase> clases = new HashSet<Clase>(0);
 
 	public Asignatura() {
 	}
@@ -36,7 +40,7 @@ public class Asignatura implements java.io.Serializable {
 	}
 
 	public Asignatura(long idAsignatura, Departamento departamento, String nombreAsignatura, String componenteCurso,
-			Long creditos, Set clases) {
+			Long creditos, Set<Clase> clases) {
 		this.idAsignatura = idAsignatura;
 		this.departamento = departamento;
 		this.nombreAsignatura = nombreAsignatura;

@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,10 +19,14 @@ import javax.persistence.Table;
 @Table(name = "PROTOCOLO_ATENCION", schema = "SATFING")
 public class ProtocoloAtencion implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoProtocolo;
 	private Estudiante estudiante;
 	private Alerta alerta;
-	private Set<Intervencion> intervencions = new HashSet(0);
+	private Set<Intervencion> intervencions = new HashSet<Intervencion>(0);
 
 	public ProtocoloAtencion() {
 	}
@@ -33,7 +37,7 @@ public class ProtocoloAtencion implements java.io.Serializable {
 		this.alerta = alerta;
 	}
 
-	public ProtocoloAtencion(long codigoProtocolo, Estudiante estudiante, Alerta alerta, Set intervencions) {
+	public ProtocoloAtencion(long codigoProtocolo, Estudiante estudiante, Alerta alerta, Set<Intervencion> intervencions) {
 		this.codigoProtocolo = codigoProtocolo;
 		this.estudiante = estudiante;
 		this.alerta = alerta;

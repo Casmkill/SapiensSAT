@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,14 +20,18 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "DEPARTAMENTO", schema = "SATFING", uniqueConstraints = @UniqueConstraint(columnNames = "DIRECTOR"))
 public class Departamento implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String idDepartamento;
 	private Facultad facultad;
 	private Persona persona;
 	private String nombreDepartamento;
-	private Set<Carrera> carreras = new HashSet(0);
-	private Set<Consejero> consejeros = new HashSet(0);
-	private Set<Asignatura> asignaturas = new HashSet(0);
-	private Set<Profesor> profesors = new HashSet(0);
+	private Set<Carrera> carreras = new HashSet<Carrera>(0);
+	private Set<Consejero> consejeros = new HashSet<Consejero>(0);
+	private Set<Asignatura> asignaturas = new HashSet<Asignatura>(0);
+	private Set<Profesor> profesors = new HashSet<Profesor>(0);
 
 	public Departamento() {
 	}
@@ -40,7 +44,7 @@ public class Departamento implements java.io.Serializable {
 	}
 
 	public Departamento(String idDepartamento, Facultad facultad, Persona persona, String nombreDepartamento,
-			Set carreras, Set consejeros, Set asignaturas, Set profesors) {
+			Set<Carrera> carreras, Set<Consejero> consejeros, Set<Asignatura> asignaturas, Set<Profesor> profesors) {
 		this.idDepartamento = idDepartamento;
 		this.facultad = facultad;
 		this.persona = persona;

@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -19,6 +19,10 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "CONSEJERO", schema = "SATFING", uniqueConstraints = @UniqueConstraint(columnNames = "CODIGO_PERSONA"))
 public class Consejero implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ConsejeroId id;
 	private Departamento departamento;
 	private Persona persona;

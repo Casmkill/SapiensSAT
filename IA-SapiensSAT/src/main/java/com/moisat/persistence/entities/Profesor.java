@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,10 +20,14 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "PROFESOR", schema = "SATFING", uniqueConstraints = @UniqueConstraint(columnNames = "CODIGO_PERSONA"))
 public class Profesor implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoProfesor;
 	private Departamento departamento;
 	private Persona persona;
-	private Set<Clase> clases = new HashSet(0);
+	private Set<Clase> clases = new HashSet<Clase>(0);
 
 	public Profesor() {
 	}
@@ -34,7 +38,7 @@ public class Profesor implements java.io.Serializable {
 		this.persona = persona;
 	}
 
-	public Profesor(long codigoProfesor, Departamento departamento, Persona persona, Set clases) {
+	public Profesor(long codigoProfesor, Departamento departamento, Persona persona, Set<Clase> clases) {
 		this.codigoProfesor = codigoProfesor;
 		this.departamento = departamento;
 		this.persona = persona;

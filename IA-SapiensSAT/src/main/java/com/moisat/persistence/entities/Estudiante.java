@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +20,10 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "ESTUDIANTE", schema = "SATFING", uniqueConstraints = @UniqueConstraint(columnNames = "CODIGO_PERSONA"))
 public class Estudiante implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoEstudiante;
 	private Persona persona;
 	private String saber11;
@@ -30,9 +34,9 @@ public class Estudiante implements java.io.Serializable {
 	private Short asistenciascaps;
 	private Short asistenciamath;
 	private String nivelclasificacionmath;
-	private Set<CarreraEstudiante> carreraEstudiantes = new HashSet(0);
-	private Set <RegistroClaseEstudiante>registroClaseEstudiantes = new HashSet(0);
-	private Set <ProtocoloAtencion>protocoloAtencions = new HashSet(0);
+	private Set<CarreraEstudiante> carreraEstudiantes = new HashSet<CarreraEstudiante>(0);
+	private Set<RegistroClaseEstudiante> registroClaseEstudiantes = new HashSet<RegistroClaseEstudiante>(0);
+	private Set<ProtocoloAtencion> protocoloAtencions = new HashSet<ProtocoloAtencion>(0);
 
 	public Estudiante() {
 	}
@@ -44,8 +48,8 @@ public class Estudiante implements java.io.Serializable {
 
 	public Estudiante(long codigoEstudiante, Persona persona, String saber11, Long saber11math, String tipodeadmision,
 			String saber11lenguaje, String nivelclasificacionlenguas, Short asistenciascaps, Short asistenciamath,
-			String nivelclasificacionmath, Set carreraEstudiantes, Set registroClaseEstudiantes,
-			Set protocoloAtencions) {
+			String nivelclasificacionmath, Set<CarreraEstudiante> carreraEstudiantes, Set<RegistroClaseEstudiante> registroClaseEstudiantes,
+			Set<ProtocoloAtencion> protocoloAtencions) {
 		this.codigoEstudiante = codigoEstudiante;
 		this.persona = persona;
 		this.saber11 = saber11;

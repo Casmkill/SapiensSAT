@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,12 +21,16 @@ import javax.persistence.UniqueConstraint;
 		@UniqueConstraint(columnNames = "DEPARTAMENTOASOCIADO"), @UniqueConstraint(columnNames = "DIRECTOR") })
 public class Carrera implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long idCarrera;
 	private Facultad facultad;
 	private Departamento departamento;
 	private Persona persona;
 	private String nombreCarrera;
-	private Set <CarreraEstudiante>carreraEstudiantes = new HashSet(0);
+	private Set<CarreraEstudiante> carreraEstudiantes = new HashSet<CarreraEstudiante>(0);
 
 	public Carrera() {
 	}
@@ -41,7 +45,7 @@ public class Carrera implements java.io.Serializable {
 	}
 
 	public Carrera(long idCarrera, Facultad facultad, Departamento departamento, Persona persona, String nombreCarrera,
-			Set carreraEstudiantes) {
+			Set<CarreraEstudiante> carreraEstudiantes) {
 		this.idCarrera = idCarrera;
 		this.facultad = facultad;
 		this.departamento = departamento;

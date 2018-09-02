@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<agent xmlns="http://jadex.sourceforge.net/jadex-bdi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex-bdi
+	                    http://jadex.sourceforge.net/jadex-bdi-2.0.xsd"
+	name="Academic" package="com.moisat.agent.capability.belief">
+
+
+	<beliefs>
+		<!-- enviroment -->
+		<belief name="saber 11" class="String">
+		<fact></fact>
+		</belief>
+		<belief name="saber11math" class=""></belief>
+		<belief name="saber11lenguajes" class=""></belief>
+		<belief name="" class=""></belief>
+		<belief name="" class=""></belief>
+		<belief name="" class=""></belief>
+	</beliefs>
+
+
+	<plans>
+
+		<plan>
+		</plan>
+
+		<plan>
+		</plan>
+
+		<plan>
+		</plan>
+
+		<plan>
+		</plan>
+
+		<plan>
+		</plan>
+
+		<plan>
+		</plan>
+	</plans>
+
+
+	<capabilities>
+	</capabilities>
+</agent>

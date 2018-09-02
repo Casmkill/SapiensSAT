@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
-		<property name="hibernate.current_session_context_class">
-			org.hibernate.context.internal.ThreadLocalSessionContext
-		</property>
-		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
-		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-		<property name="hibernate.connection.password">g3paij8G/8Jj</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@orion.javeriana.edu.co:1521:PUJDB</property>
-		<property name="hibernate.connection.username">satfing</property>
-		<property name="hibernate.dialect">Oracle10g</property>
-		<property name="hibernate.search.autoregister_listeners">true</property>
-		<property name="hibernate.validator.apply_to_ddl">false</property>
-		<mapping class="com.moisat.persistence.entities.Actor" />
-		<mapping class="com.moisat.persistence.entities.Asignatura" />
-		<mapping class="com.moisat.persistence.entities.CarreraEstudiante" />
-		<mapping class="com.moisat.persistence.entities.Estudiante" />
-		<mapping class="com.moisat.persistence.entities.Intervencion" />
-		<mapping class="com.moisat.persistence.entities.Carrera" />
-		<mapping class="com.moisat.persistence.entities.ProtocoloAtencion" />
-		<mapping class="com.moisat.persistence.entities.Profesor" />
-		<mapping class="com.moisat.persistence.entities.Consejero" />
-		<mapping class="com.moisat.persistence.entities.Persona" />
-		<mapping class="com.moisat.persistence.entities.RegistroClaseEstudiante" />
-		<mapping class="com.moisat.persistence.entities.Alerta" />
-		<mapping class="com.moisat.persistence.entities.Clase" />
-		<mapping class="com.moisat.persistence.entities.Departamento" />
-		<mapping class="com.moisat.persistence.entities.CentrosDeAyuda" />
-		<mapping class="com.moisat.persistence.entities.FactorRiesgo" />
-		<mapping class="com.moisat.persistence.entities.Facultad" />
-
-
-	</session-factory>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.password">g3paij8G/8Jj</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@orion.javeriana.edu.co:1521:PUJDB</property>
+        <property name="hibernate.connection.username">satfing</property>
+        <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+        <property name="hibernate.dialect">Oracle10g</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="com.moisat.persistence.entities.Actor"/>
+        <mapping class="com.moisat.persistence.entities.Asignatura"/>
+        <mapping class="com.moisat.persistence.entities.CarreraEstudiante"/>
+        <mapping class="com.moisat.persistence.entities.Estudiante"/>
+        <mapping class="com.moisat.persistence.entities.Intervencion"/>
+        <mapping class="com.moisat.persistence.entities.Carrera"/>
+        <mapping class="com.moisat.persistence.entities.ProtocoloAtencion"/>
+        <mapping class="com.moisat.persistence.entities.Profesor"/>
+        <mapping class="com.moisat.persistence.entities.Consejero"/>
+        <mapping class="com.moisat.persistence.entities.Persona"/>
+        <mapping class="com.moisat.persistence.entities.RegistroClaseEstudiante"/>
+        <mapping class="com.moisat.persistence.entities.Alerta"/>
+        <mapping class="com.moisat.persistence.entities.Clase"/>
+        <mapping class="com.moisat.persistence.entities.Departamento"/>
+        <mapping class="com.moisat.persistence.entities.CentrosDeAyuda"/>
+        <mapping class="com.moisat.persistence.entities.FactorRiesgo"/>
+        <mapping class="com.moisat.persistence.entities.Facultad"/>
+    </session-factory>
 </hibernate-configuration>

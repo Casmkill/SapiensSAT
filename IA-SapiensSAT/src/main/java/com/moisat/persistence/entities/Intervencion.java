@@ -1,5 +1,5 @@
 package com.moisat.persistence.entities;
-// Generated Aug 30, 2018 5:54:55 PM by Hibernate Tools 5.2.3.Final
+// Generated Sep 1, 2018 11:44:50 AM by Hibernate Tools 5.2.3.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,10 +20,14 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "INTERVENCION", schema = "SATFING", uniqueConstraints = @UniqueConstraint(columnNames = "CODIGO_PROTOCOLO"))
 public class Intervencion implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long codigoIntervencion;
 	private ProtocoloAtencion protocoloAtencion;
 	private String estadoIntervencion;
-	private Set<Actor> actors = new HashSet(0);
+	private Set<Actor> actors = new HashSet<Actor>(0);
 
 	public Intervencion() {
 	}
@@ -34,7 +38,7 @@ public class Intervencion implements java.io.Serializable {
 	}
 
 	public Intervencion(long codigoIntervencion, ProtocoloAtencion protocoloAtencion, String estadoIntervencion,
-			Set actors) {
+			Set<Actor> actors) {
 		this.codigoIntervencion = codigoIntervencion;
 		this.protocoloAtencion = protocoloAtencion;
 		this.estadoIntervencion = estadoIntervencion;
