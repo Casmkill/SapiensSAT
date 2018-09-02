@@ -11,11 +11,20 @@
 		<belief name="saber 11" class="String">
 		<fact></fact>
 		</belief>
-		<belief name="saber11math" class=""></belief>
-		<belief name="saber11lenguajes" class=""></belief>
-		<belief name="" class=""></belief>
-		<belief name="" class=""></belief>
-		<belief name="" class=""></belief>
+		<belief name="saber11math" class="Long">
+		<fact></fact>
+		</belief>
+		<belief name="saber11lenguajes" class="String">
+		<fact></fact>
+		</belief>
+		<belief name="" class=""><fact></fact>
+		</belief>
+		<belief name="" class="">
+		<fact></fact>
+		</belief>
+		<belief name="" class="">
+		<fact></fact>
+		</belief>
 	</beliefs>
 
 

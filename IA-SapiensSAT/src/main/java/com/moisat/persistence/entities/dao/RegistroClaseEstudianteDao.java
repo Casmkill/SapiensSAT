@@ -131,7 +131,7 @@ public class RegistroClaseEstudianteDao implements DaoInterface<RegistroClaseEst
 	@Override
 	public List<RegistroClaseEstudiante> findAll() {
 		// TODO Auto-generated method stub
-		List<RegistroClaseEstudiante> registrosClaseEstudiante = (List<RegistroClaseEstudiante>) getCurrentSession().createQuery("from REGISTRO_CLASE_ESTUDIANTE").list();
+		List<RegistroClaseEstudiante> registrosClaseEstudiante = (List<RegistroClaseEstudiante>) getCurrentSession().createQuery("from RegistroClaseEstudiante").list();
 		return registrosClaseEstudiante;
 	}
 

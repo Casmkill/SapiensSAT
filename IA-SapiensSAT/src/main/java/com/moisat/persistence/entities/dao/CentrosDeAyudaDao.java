@@ -12,8 +12,11 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 
 import com.moisat.persistence.entities.CentrosDeAyuda;
 
@@ -68,16 +71,20 @@ public class CentrosDeAyudaDao implements DaoInterface<CentrosDeAyuda, Long> {
 	}
 
 	private static SessionFactory getSessionFactory() {
+		try {
 
-		Configuration configuration = new Configuration().configure();
+			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()//
+					.configure("hibernate.cfg.xml").build();
 
-		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+			// Create a metadata sources using the specified service registry.
+			Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
 
-				.applySettings(configuration.getProperties());
+			return metadata.getSessionFactoryBuilder().build();
+		} catch (Throwable ex) {
 
-		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
-
-		return sessionFactory;
+			System.err.println("Initial SessionFactory creation failed." + ex);
+			throw new ExceptionInInitializerError(ex);
+		}
 
 	}
 
@@ -135,7 +142,7 @@ public class CentrosDeAyudaDao implements DaoInterface<CentrosDeAyuda, Long> {
 	public List<CentrosDeAyuda> findAll() {
 		// TODO Auto-generated method stub
 		List<CentrosDeAyuda> actores = (List<CentrosDeAyuda>) getCurrentSession()
-				.createQuery("from CENTROS_DE_AYUDA").list();
+				.createQuery("from CentrosDeAyuda").list();
 		return actores;
 	}
 

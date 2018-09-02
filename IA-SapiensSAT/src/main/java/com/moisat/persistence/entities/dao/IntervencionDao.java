@@ -8,8 +8,11 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 
 import com.moisat.persistence.entities.Intervencion;
 import com.moisat.persistence.entities.daointerface.DaoInterface;
@@ -62,16 +65,20 @@ public class IntervencionDao implements DaoInterface<Intervencion, Long>{
 	}
 
 	private static SessionFactory getSessionFactory() {
+		try {
 
-		Configuration configuration = new Configuration().configure();
+			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()//
+					.configure("hibernate.cfg.xml").build();
 
-		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+			// Create a metadata sources using the specified service registry.
+			Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
 
-				.applySettings(configuration.getProperties());
+			return metadata.getSessionFactoryBuilder().build();
+		} catch (Throwable ex) {
 
-		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
-
-		return sessionFactory;
+			System.err.println("Initial SessionFactory creation failed." + ex);
+			throw new ExceptionInInitializerError(ex);
+		}
 
 	}
 
@@ -128,7 +135,7 @@ public class IntervencionDao implements DaoInterface<Intervencion, Long>{
 	@Override
 	public List<Intervencion> findAll() {
 		// TODO Auto-generated method stub
-		List<Intervencion> intervenciones = (List<Intervencion>) getCurrentSession().createQuery("from INTERVENCION").list();
+		List<Intervencion> intervenciones = (List<Intervencion>) getCurrentSession().createQuery("from Intervencion").list();
 		return intervenciones;
 	}
 
